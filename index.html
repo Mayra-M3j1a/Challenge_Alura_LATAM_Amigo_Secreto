@@ -1,85 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigo Secreto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .container {
-            max-width: 400px;
-            background: white;
-            padding: 20px;
-            margin: auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        input, button {
-            margin: 10px 0;
-            padding: 10px;
-            width: 80%;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #ddd;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Amigo Secreto</h2>
-        <input type="text" id="nombre" placeholder="Nombre">
-        <button onclick="agregarAmigo()">Agregar</button>
-        <ul id="lista"></ul>
-        <button onclick="sortear()">Sortear</button>
-        <div id="resultado"></div>
-    </div>
+    <h1>Amigo Secreto</h1>
+    <p>Ingresa los nombres de los participantes separados por comas:</p>
+    <textarea id="nombres" rows="4" cols="50" placeholder="Ana, Carlos, María, Luis, Sofía"></textarea>
+    <br><br>
+    <button onclick="mostrarAsignaciones()">Generar Amigo Secreto</button>
+    <h2>Resultados:</h2>
+    <pre id="resultado"></pre>
 
     <script>
-        const amigos = [];
-
-        function agregarAmigo() {
-            const nombre = document.getElementById("nombre").value.trim();
-            if (nombre && !amigos.includes(nombre)) {
-                amigos.push(nombre);
-                document.getElementById("lista").innerHTML += `<li>${nombre}</li>`;
-                document.getElementById("nombre").value = "";
-            } else {
-                alert("Nombre inválido o ya ingresado.");
+        // Función para mezclar la lista de nombres
+        function mezclar(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
             }
+            return array;
         }
 
-        function sortear() {
-            if (amigos.length < 2) {
+        // Función principal para asignar amigos secretos
+        function asignarAmigosSecretos(nombres) {
+            if (nombres.length < 2) {
                 alert("Debe haber al menos dos participantes.");
+                return null;
+            }
+
+            // Mezclar la lista de nombres
+            const mezclados = mezclar([...nombres]);
+            const asignaciones = {};
+
+            for (let i = 0; i < nombres.length; i++) {
+                asignaciones[nombres[i]] = mezclados[i];
+            }
+
+            // Verificar que nadie se asigne a sí mismo
+            for (const [nombre, asignado] of Object.entries(asignaciones)) {
+                if (nombre === asignado) {
+                    console.log("Se detectó una autoasignación. Reiniciando...");
+                    return asignarAmigosSecretos(nombres); // Reiniciar en caso de error
+                }
+            }
+
+            return asignaciones;
+        }
+
+        // Función para mostrar las asignaciones en la página
+        function mostrarAsignaciones() {
+            const input = document.getElementById("nombres").value;
+            const nombres = input.split(",").map(nombre => nombre.trim()).filter(nombre => nombre);
+
+            if (nombres.length < 2) {
+                document.getElementById("resultado").textContent = "Debe haber al menos dos participantes.";
                 return;
             }
-            
-            let mezclados = [...amigos];
-            do {
-                mezclados.sort(() => Math.random() - 0.5);
-            } while (mezclados.some((amigo, i) => amigo === amigos[i]));
-            
-            let resultado = "<h3>Resultados del sorteo:</h3><ul>";
-            amigos.forEach((amigo, i) => {
-                resultado += `<li>${amigo} → ${mezclados[i]}</li>`;
-            });
-            resultado += "</ul>";
-            
-            document.getElementById("resultado").innerHTML = resultado;
+
+            const resultado = asignarAmigosSecretos(nombres);
+
+            if (resultado) {
+                let textoResultado = "";
+                for (const [nombre, asignado] of Object.entries(resultado)) {
+                    textoResultado += `${nombre} → ${asignado}\n`;
+                }
+                document.getElementById("resultado").textContent = textoResultado;
+            }
         }
     </script>
 </body>
 </html>
+
