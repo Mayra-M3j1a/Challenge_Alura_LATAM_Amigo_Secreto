@@ -160,3 +160,25 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+/* ================================================== */
+/* Estilos para el mensaje de error */
+.mensaje-error {
+    color: #ff0000; /* Color rojo para el mensaje de error */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffe6e6; /* Fondo rojo claro */
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    display: none; /* Ocultar por defecto */
+}
+
+/* Mostrar el mensaje de error cuando tenga contenido */
+.mensaje-error:not(:empty) {
+    display: block;
+}
+/* ================================================== */
