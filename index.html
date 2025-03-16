@@ -1,11 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge amigo secreto</title>
+    <title>Amigo Secreto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Amigo Secreto</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <button onclick="agregarAmigo()">Agregar</button>
+        <ul id="lista"></ul>
+        <button onclick="sortear()">Sortear</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const amigos = [];
+
+        function agregarAmigo() {
+            const nombre = document.getElementById("nombre").value.trim();
+            if (nombre && !amigos.includes(nombre)) {
+                amigos.push(nombre);
+                document.getElementById("lista").innerHTML += `<li>${nombre}</li>`;
+                document.getElementById("nombre").value = "";
+            } else {
+                alert("Nombre inválido o ya ingresado.");
+            }
+        }
+
+        function sortear() {
+            if (amigos.length < 2) {
+                alert("Debe haber al menos dos participantes.");
+                return;
+            }
+            
+            let mezclados = [...amigos];
+            do {
+                mezclados.sort(() => Math.random() - 0.5);
+            } while (mezclados.some((amigo, i) => amigo === amigos[i]));
+            
+            let resultado = "<h3>Resultados del sorteo:</h3><ul>";
+            amigos.forEach((amigo, i) => {
+                resultado += `<li>${amigo} → ${mezclados[i]}</li>`;
+            });
+            resultado += "</ul>";
+            
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
 </body>
 </html>
