@@ -18,7 +18,7 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 ## Visualización de lista de nombres
 
 <p align="center">
-  <img src="lista de nombres.png" alt="Imagen" width="500">
+  <img src="lista de nombres.png](https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/lista%20de%20nombres.png" alt="Imagen" width="500">
 </p>
 
 
