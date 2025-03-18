@@ -12,8 +12,14 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 
 ## ¿Cuál es su finalidad?
 
-- **Insertar nombres**: Los usuarios pueden ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
+- **Insertar nombres**: Debes ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
 - **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
+
+## Visualización de lista de nombres
+
+<p align="center">
+  <img src="file:///C:/Users/ferna/Downloads/Oracle/challenge-amigo-secreto_esp-main/challenge-amigo-secreto_esp-main/assets/lista%20de%20nombres.png" alt="Imagen" width="500">
+</p>
 
 
 
