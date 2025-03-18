@@ -6,11 +6,13 @@ function agregarAmigo() {
     const inputAmigo = document.getElementById('amigo');
     const nombreAmigo = inputAmigo.value.trim();
 
+    // Validar que el nombre no esté vacío
     if (nombreAmigo === '') {
         alert('Por favor, ingresa un nombre válido.');
         return;
     }
 
+    // Validar que el nombre no esté repetido
     if (amigos.includes(nombreAmigo)) {
         alert('Este nombre ya está en la lista.');
         return;
@@ -31,6 +33,7 @@ function actualizarListaAmigos() {
     const listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = ''; // Limpiar la lista antes de actualizar
 
+    // Recorrer el array de amigos y crear elementos <li>
     amigos.forEach((amigo) => {
         const li = document.createElement('li');
         li.textContent = amigo;
@@ -40,6 +43,7 @@ function actualizarListaAmigos() {
 
 // Función para sortear un nombre aleatorio
 function sortearAmigo() {
+    // Verificar que haya al menos un nombre en la lista
     if (amigos.length === 0) {
         alert('No hay nombres en la lista. Agrega al menos un nombre.');
         return;
@@ -56,8 +60,15 @@ function sortearAmigo() {
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
-    amigos = []; // Vaciar el array de amigos
-    document.getElementById('listaAmigos').innerHTML = ''; // Limpiar la lista en el DOM
-    document.getElementById('resultado').innerHTML = ''; // Limpiar los resultados
-    document.getElementById('amigo').value = ''; // Limpiar el input
+    // Vaciar el array de amigos
+    amigos = [];
+
+    // Limpiar la lista en el DOM
+    document.getElementById('listaAmigos').innerHTML = '';
+
+    // Limpiar los resultados
+    document.getElementById('resultado').innerHTML = '';
+
+    // Limpiar el input
+    document.getElementById('amigo').value = '';
 }
