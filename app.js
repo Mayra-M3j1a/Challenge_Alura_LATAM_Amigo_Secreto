@@ -46,19 +46,32 @@ function sortearAmigo() {
     }
 
     // Copia del array para no modificar el original
-    const amigosSorteados = [...amigos];
+    let amigosSorteados = [...amigos];
 
-    // Mezclar el array de amigos
-    for (let i = amigosSorteados.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [amigosSorteados[i], amigosSorteados[j]] = [amigosSorteados[j], amigosSorteados[i]];
+    // Mezclar el array hasta que nadie sea asignado a sí mismo
+    let asignacionValida = false;
+    while (!asignacionValida) {
+        // Mezclar el array de amigos
+        for (let i = amigosSorteados.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [amigosSorteados[i], amigosSorteados[j]] = [amigosSorteados[j], amigosSorteados[i]];
+        }
+
+        // Verificar que nadie sea asignado a sí mismo
+        asignacionValida = true;
+        for (let i = 0; i < amigos.length; i++) {
+            if (amigos[i] === amigosSorteados[i]) {
+                asignacionValida = false;
+                break;
+            }
+        }
     }
 
     // Mostrar los resultados en el DOM
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = ''; // Limpiar resultados anteriores
 
-    for (let i = 0; i < amigosSorteados.length; i++) {
+    for (let i = 0; i < amigos.length; i++) {
         const amigoActual = amigos[i];
         const amigoSorteado = amigosSorteados[i];
 
@@ -67,7 +80,6 @@ function sortearAmigo() {
         resultado.appendChild(li);
     }
 }
-
 // Función para reiniciar el juego
 function reiniciarJuego() {
     amigos = []; // Vaciar el array de amigos
