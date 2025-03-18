@@ -4,13 +4,11 @@ El proyecto 'Amigo Secreto' es una aplicación web diseñada para que permite in
 
 # Conocimientos adquiridos
 Este desafío fue diseñado para aplicar de manera práctica los conocimientos adquiridos en los siguientes cursos:
-=======
-Este desafío fue diseñado para aplicar de manera práctica los conocimientos adquiridos en los siguientes cursos:
 
-Lógica de programación: sumérgete en la programación con JavaScript
-Lógica de programación: explorar funciones y listas
-ChatGPT: optimizando la calidad de los resultados
-Git y GitHub: repositorio, commit y versiones
+- **Lógica de programación: sumérgete en la programación con JavaScript
+- **Lógica de programación: explorar funciones y listas
+- **ChatGPT: optimizando la calidad de los resultados
+- **Git y GitHub: repositorio, commit y versiones
 
 ## ¿Cuál es su finalidad?
 
