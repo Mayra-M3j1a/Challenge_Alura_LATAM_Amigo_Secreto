@@ -18,7 +18,7 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 ## Visualización de lista de nombres
 
 <p align="center">
-  <img src="file:///C:/Users/ferna/Downloads/Oracle/challenge-amigo-secreto_esp-main/challenge-amigo-secreto_esp-main/assets/lista%20de%20nombres.png" alt="Imagen" width="500">
+  <img src="lista de nombres.png" alt="Imagen" width="500">
 </p>
 
 
