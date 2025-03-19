@@ -43,9 +43,9 @@ function actualizarListaAmigos() {
 
 // Función para sortear un nombre aleatorio
 function sortearAmigo() {
-    // Verificar que haya al menos un nombre en la lista
-    if (amigos.length === 0) {
-        alert('No hay nombres en la lista. Agrega al menos un nombre.');
+    // Verificar que haya al menos dos nombres en la lista
+    if (amigos.length < 2) {
+        alert('Debes agregar al menos dos nombres para realizar el sorteo.');
         return;
     }
 
