@@ -26,7 +26,7 @@ Solo debes de ingresar a esta URL:
 </p>
 
 ## Visualización de nombre sorteado
-- **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
+- **Validación de entrada**: Una vez que tengas la lista de los nombres debes de dar clic en el botón Sortear Amigo y finalmente obtendrás el nombre del "Amigo Secreto"
 <p align="center">
   <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/lista%20de%20nombres.png" alt="Imagen" width="800">
 </p>
