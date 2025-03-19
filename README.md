@@ -16,10 +16,11 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 - **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
 
 ## Agregando los nombres
-
+<p align="center">
+  <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Agregando%20nombres.png" alt="Imagen" width="800">
+</p>
 
 ## Visualización de nombre sorteado
-
 <p align="center">
   <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/lista%20de%20nombres.png" alt="Imagen" width="800">
 </p>
