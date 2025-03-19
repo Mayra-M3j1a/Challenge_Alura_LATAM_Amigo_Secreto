@@ -22,9 +22,8 @@ Solo debes de ingresar a esta URL:
 ## Nombres repetidos
 - **Posible error**: Debes ingresar nombres sin que sean repetidos si por alguna razón agregas uno visualizarás este mensaje:
 <p align="center">
-  <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Agregando%20nombres.png" alt="Imagen" width="800">
+  <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Nombre%20repetido.png" alt="Imagen" width="800">
 </p>
-
 
 ## Visualización de nombre sorteado
 - **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
