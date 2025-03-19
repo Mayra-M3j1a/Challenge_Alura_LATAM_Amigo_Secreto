@@ -13,14 +13,18 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 ## Acceso al Challenge Amigo secreto
 Solo debes de ingresar a esta URL: 
 
-
-## ¿Cuál es su finalidad?
-
 ## Agregando los nombres
 - **Ingresar nombres**: Debes ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
 <p align="center">
   <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Agregando%20nombres.png" alt="Imagen" width="800">
 </p>
+
+## Nombres repetidos
+- **Posible error**: Debes ingresar nombres sin que sean repetidos si por alguna razón agregas uno visualizarás este mensaje:
+<p align="center">
+  <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Agregando%20nombres.png" alt="Imagen" width="800">
+</p>
+
 
 ## Visualización de nombre sorteado
 - **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
