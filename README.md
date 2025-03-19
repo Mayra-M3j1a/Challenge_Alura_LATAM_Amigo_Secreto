@@ -10,17 +10,20 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 - ChatGPT: optimizando la calidad de los resultados
 - Git y GitHub: repositorio, commit y versiones
 
+## Acceso al Challenge Amigo secreto
+Solo debes de ingresar a esta URL: 
+
+
 ## ¿Cuál es su finalidad?
 
-- **Ingresar nombres**: Debes ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
-- **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
-
 ## Agregando los nombres
+- **Ingresar nombres**: Debes ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
 <p align="center">
   <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/Agregando%20nombres.png" alt="Imagen" width="800">
 </p>
 
 ## Visualización de nombre sorteado
+- **Validación de entrada**: Si el campo de texto está vacío o contiene caracteres no válidos, el sistema mostrará una alerta solicitando un nombre válido.
 <p align="center">
   <img src="https://github.com/Mayra-M3j1a/Challenge_Alura_LATAM_Amigo_Secreto/blob/main/assets/lista%20de%20nombres.png" alt="Imagen" width="800">
 </p>
