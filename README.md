@@ -11,7 +11,7 @@ Este desafío fue diseñado para aplicar de manera práctica los conocimientos a
 - Git y GitHub: repositorio, commit y versiones
 
 ## Acceso al Challenge Amigo secreto
-Solo debes de ingresar a esta URL: 
+Solo debes de ingresar a esta URL: https://mayra-m3j1a.github.io/Challenge_Alura_LATAM_Amigo_Secreto/
 
 ## Agregando los nombres
 - **Ingresar nombres**: Debes ingresar nombres en un campo de texto y hacer clic en "Añadir" para agregarlos a la lista.
