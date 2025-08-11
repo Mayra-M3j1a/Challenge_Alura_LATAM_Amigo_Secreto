@@ -1,4 +1,4 @@
-<em> Mi Primer Challenge Alura Latam / ONE - Oracle Next Education G8 </em>
+<h1> Mi Primer Challenge Alura Latam / ONE - Oracle Next Education G8 </h1>
 Curso Practicando Lógica de Programación: Challenge Amigo secreto
 El proyecto 'Amigo Secreto' es una aplicación web diseñada para que permite ingresar una lista de nombres y distribuirlos de forma eficiente, asegurando que cada persona reciba un nombre sin repeticiones. Esta herramienta es ideal para la organización de actividades optimizando la asignación y garantizando una experiencia fluida para los usuarios. 
 
